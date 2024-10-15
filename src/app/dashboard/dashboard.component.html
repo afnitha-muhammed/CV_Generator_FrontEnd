@@ -1,0 +1,53 @@
+<div class="d-flex">
+    <!--Sidebar-->
+    <div id="sidebar">
+        <div class="mt-5 text-center text-light">
+            <a routerLink="/dashboard">
+                <h3>Dashboard</h3>
+            </a>
+            <hr>
+            <a routerLink="/add">
+                <h5 class="mt-3">Create New CV</h5>
+            </a>
+        </div>
+    </div>
+    <!--Main-->
+    <div class="container-fluid">
+        <div class="row pt-3 ps-1">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex align-items-center justify-content-center flex-column">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.tu8rvaP_gc70EHI-HzQuwgHaHa&pid=Api&P=0&h=180" class="mt-5"
+                    alt="" height="100px" width="100px">
+                <h2 class="mt-2 text-center">Welcome to Cv-Genrator</h2>
+                <!--All User View-->
+                <table class="table border mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let users of allusers?.controls; let i = index">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{users.name}}</td>
+                            <td>{{users.email}}</td>
+                            <td>{{users.date}}</td>
+                            <td>
+                                <a routerLink="/edit"><button class="btn btn-outline-danger"><i
+                                            class="fa-regular fa-pen-to-square me-2"></i>Edit</button></a>
+                                <button class="btn btn-outline-success ms-2"><i
+                                        class="fa-regular fa-newspaper me-2"></i>Generate CV</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+#sidebar{
+    width: 220px;
+    background-color: rgb(5, 113, 140);
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
